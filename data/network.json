@@ -3,7 +3,7 @@
     "nodes": [
         {
             "id": "s1",
-            "caption": "belated hbd arpita",
+            "caption": "A",
             "role": "http_server",
             "memoryUsage": 50,
             "root": 100,
@@ -11,42 +11,90 @@
         },
         {
             "id": "s2",
-            "caption": "placeholder",
+            "caption": "R",
             "role": "http_server",
             "memoryUsage": 22,
-            "root": true
+            "root": true,
+            "onclick": "node2.html"
         },        
         {
             "id": "s3",
-            "caption": "placeholder",
-            "role": "http_server",
+            "caption": "P",
+            "role": "neo4j",
             "memoryUsage": 95,
-            "root": true
+            "root": true, 
+            "onclick": "node3.html"
         },
         {
             "id": "s4",
-            "caption": "placeholder",
-            "role": "neo4j",
+            "caption": "I",
+            "role": "http_server",
             "memoryUsage": 10,
-            "root": false
+            "root": false,
+            "onclick": "node4.html"
         },
         {
             "id": "s5",
-            "caption": "placeholder",
+            "caption": "T",
             "role": "postgres",
             "memoryUsage": 30,
-            "root": false
+            "root": false,
+            "onclick": "node5.html"
         },
         {
             "id": "s6",
-            "caption": "placeholder",
+            "caption": "A",
             "role": "db_backups",
             "memoryUsage": 10, 
-            "root": false
+            "root": false,
+            "onclick": "node6.html"
         },
         {
             "id": "s7",
-            "caption": "placeholder",
+            "caption": "M",
+            "role": "load balancer",
+            "memoryUsage": 42,
+            "root": false,
+            "onclick": "node7.html"
+        },
+        {
+            "id": "s13",
+            "caption": "A",
+            "role": "load balancer",
+            "memoryUsage": 42,
+            "root": false
+        },
+        {
+            "id": "s8",
+            "caption": "L",
+            "role": "load balancer",
+            "memoryUsage": 42,
+            "root": false
+        },
+        {
+            "id": "s9",
+            "caption": "L",
+            "role": "load balancer",
+            "memoryUsage": 42,
+            "root": false
+        },
+        {
+            "id": "s10",
+            "caption": "I",
+            "role": "load balancer",
+            "memoryUsage": 42,
+            "root": false
+        },
+        {
+            "id": "s11",
+            "caption": "C",
+            "role": "load balancer",
+            "memoryUsage": 42,
+            "root": false
+        },
+        {
+            "id": "s12",
+            "caption": "K",
             "role": "load balancer",
             "memoryUsage": 42,
             "root": false
@@ -107,7 +155,49 @@
             "source": "s5",
             "target": "s6",
             "load": 0
-        }
+        },
+        {
+            "source": "s2",
+            "target": "s8",
+            "load": 1
+        },
+        {
+            "source": "s8",
+            "target": "s9",
+            "load": 1
+        },
+        {
+            "source": "s5",
+            "target": "s9",
+            "load": 1
+        },
+        {
+            "source": "s7",
+            "target": "s10",
+            "load": 1
+        },
+        {
+            "source": "s10",
+            "target": "s11",
+            "load": 1
+        },
+        {
+            "source": "s2",
+            "target": "s12",
+            "load": 1
+        },
+        {
+            "source": "s4",
+            "target": "s13",
+            "load": 1
+        },
+        {
+            "source": "s10",
+            "target": "s13",
+            "load": 1
+        }        
+        
+
 
     ]
 }
