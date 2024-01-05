@@ -1,0 +1,114 @@
+{
+    "comment": "Network Graph",
+    "nodes": [
+        {
+            "id": "s1",
+            "caption": "belated hbd arpita",
+            "role": "http_server",
+            "memoryUsage": 50,
+            "root": 100,
+            "onclick": "node1.html"
+        },
+        {
+            "id": "s2",
+            "caption": "placeholder",
+            "role": "http_server",
+            "memoryUsage": 22,
+            "root": true
+        },        
+        {
+            "id": "s3",
+            "caption": "placeholder",
+            "role": "http_server",
+            "memoryUsage": 95,
+            "root": true
+        },
+        {
+            "id": "s4",
+            "caption": "placeholder",
+            "role": "neo4j",
+            "memoryUsage": 10,
+            "root": false
+        },
+        {
+            "id": "s5",
+            "caption": "placeholder",
+            "role": "postgres",
+            "memoryUsage": 30,
+            "root": false
+        },
+        {
+            "id": "s6",
+            "caption": "placeholder",
+            "role": "db_backups",
+            "memoryUsage": 10, 
+            "root": false
+        },
+        {
+            "id": "s7",
+            "caption": "placeholder",
+            "role": "load balancer",
+            "memoryUsage": 42,
+            "root": false
+        }
+    ],
+    "edges": [
+        {
+            "source": "s7",
+            "target": "s1",
+            "load": 5
+        },
+        {
+            "source": "s7",
+            "target": "s2",
+            "load": 2
+        },
+        {
+            "source": "s7",
+            "target": "s3",
+            "load": 2
+        },
+        {
+            "source": "s1",
+            "target": "s4",
+            "load": 4
+        },
+        {
+            "source": "s1",
+            "target": "s5",
+            "load": 1
+        },
+        {
+            "source": "s2",
+            "target": "s4",
+            "load": 1
+        },
+        {
+            "source": "s2",
+            "target": "s5",
+            "load": 1
+        },
+        {
+            "source": "s3",
+            "target": "s4",
+            "load": 0
+        },
+        {
+            "source": "s3",
+            "target": "s5",
+            "load": 1
+        },
+        {
+            "source": "s4",
+            "target": "s6",
+            "load": 0
+        },
+        {
+            "source": "s5",
+            "target": "s6",
+            "load": 0
+        }
+
+    ]
+}
+     
