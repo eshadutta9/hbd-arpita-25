@@ -6,13 +6,13 @@
             "caption": "A",
             "role": "http_server",
             "memoryUsage": 50,
-            "root": 100,
+            "root": 50,
             "onclick": "node1.html"
         },
         {
             "id": "s2",
             "caption": "R",
-            "role": "http_server",
+            "role": "neo4j",
             "memoryUsage": 22,
             "root": true,
             "onclick": "node2.html"
@@ -20,7 +20,7 @@
         {
             "id": "s3",
             "caption": "P",
-            "role": "neo4j",
+            "role": "http_server",
             "memoryUsage": 95,
             "root": true, 
             "onclick": "node3.html"
@@ -28,7 +28,7 @@
         {
             "id": "s4",
             "caption": "I",
-            "role": "http_server",
+            "role": "postgres",
             "memoryUsage": 10,
             "root": false,
             "onclick": "node4.html"
@@ -36,7 +36,7 @@
         {
             "id": "s5",
             "caption": "T",
-            "role": "postgres",
+            "role": "http_server",
             "memoryUsage": 30,
             "root": false,
             "onclick": "node5.html"
@@ -52,7 +52,7 @@
         {
             "id": "s7",
             "caption": "M",
-            "role": "load balancer",
+            "role": "http_server",
             "memoryUsage": 42,
             "root": false,
             "onclick": "node7.html"
@@ -62,47 +62,53 @@
             "caption": "A",
             "role": "load balancer",
             "memoryUsage": 42,
-            "root": false
+            "root": false,
+            "onclick": "node8.html"
         },
         {
             "id": "s8",
             "caption": "L",
-            "role": "load balancer",
+            "role": "http_server",
             "memoryUsage": 42,
-            "root": false
+            "root": false,
+            "onclick": "node9.html"
         },
         {
             "id": "s9",
             "caption": "L",
             "role": "load balancer",
             "memoryUsage": 42,
-            "root": false
+            "root": false,
+            "onclick": "node10.html"
         },
         {
             "id": "s10",
             "caption": "I",
             "role": "load balancer",
             "memoryUsage": 42,
-            "root": false
+            "root": false,
+            "onclick": "node11.html"
         },
         {
             "id": "s11",
             "caption": "C",
-            "role": "load balancer",
+            "role": "http_server",
             "memoryUsage": 42,
-            "root": false
+            "root": false,
+            "onclick": "node12.html"
         },
         {
             "id": "s12",
             "caption": "K",
             "role": "load balancer",
             "memoryUsage": 42,
-            "root": false
+            "root": false,
+            "onclick": "node13.html"
         }
     ],
     "edges": [
         {
-            "source": "s7",
+            "source": "s2",
             "target": "s1",
             "load": 5
         },
@@ -139,7 +145,7 @@
         {
             "source": "s3",
             "target": "s4",
-            "load": 0
+            "load": 2
         },
         {
             "source": "s3",
@@ -149,22 +155,22 @@
         {
             "source": "s4",
             "target": "s6",
-            "load": 0
+            "load": 2
         },
         {
             "source": "s5",
             "target": "s6",
-            "load": 0
+            "load": 3
         },
         {
             "source": "s2",
             "target": "s8",
-            "load": 1
+            "load": 3
         },
         {
             "source": "s8",
             "target": "s9",
-            "load": 1
+            "load": 3
         },
         {
             "source": "s5",
@@ -174,27 +180,27 @@
         {
             "source": "s7",
             "target": "s10",
-            "load": 1
+            "load": 2
         },
         {
             "source": "s10",
             "target": "s11",
-            "load": 1
+            "load": 3
         },
         {
             "source": "s2",
             "target": "s12",
-            "load": 1
+            "load": 2
         },
         {
             "source": "s4",
             "target": "s13",
-            "load": 1
+            "load": 3
         },
         {
             "source": "s10",
             "target": "s13",
-            "load": 1
+            "load": 2
         }        
         
 
